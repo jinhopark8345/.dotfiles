@@ -190,23 +190,30 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-# bindsym mod4+Shift+l exec i3lock -d -i ~/.config/i3/lock.jpeg
-# bindsym mod4+Shift+l exec i3lock -d -i
-# bindsym mod4+z exec i3lock -d -i ~/.config/i3/lock.jpeg
-# bindsym mod4+z exec i3lock -d -i /home/jinho/.config/i3/lock.jpeg
-# bindsym mod4+z exec i3lock -d -i /home/jinho/.config/i3/lock.png
-# bindsym mod4+z exec i3lock -d -i /home/jinho/.config/i3/index2.png
-# bindsym mod4+z exec i3lock -d -i /home/jinho/.config/i3/temp4.jpg
+
+# change lock screen image
 bindsym mod4+Shift+Control+l exec i3lock -i /home/jinho/Dropbox/extra-files/wallpapers/universe3.jpg
 
+# add firefox shortcut
+bindsym $mod+i exec emacs
+bindsym $mod+o exec firefox
+
+# i3-gap
+smart_gaps on
+# smart_gaps inverse_outer
+# smart_borders on
+gaps inner 15
+gaps outer 5
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
 #         status_command i3status
 # }
-for_window [class="^.*"] border pixel 1
-new_window 1pixel
+
+# border
+# for_window [class="^.*"] border pixel 1
+# new_window 1pixel
 
 # need to install bumblebee using pip
 # need to install certain python packages to use bumblebee-status, instead of "git clone"
