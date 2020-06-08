@@ -120,3 +120,4 @@ export WORKON_HOME=$HOME/.virtualenvs
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
