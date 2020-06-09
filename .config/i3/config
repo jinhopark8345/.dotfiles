@@ -60,6 +60,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # use rofi instead of dmenu
 set $bg-color&amp;amp;amp;nbsp;&amp;amp;amp;nbsp; #2f343f
@@ -248,6 +249,9 @@ bindsym $mod+i exec emacsclient --create-frame
 # emacs daemon restart
 bindsym $mod+Shift+i exec "pkill emacs && systemctl --user restart emacs.service"
 
+exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
+exec --no-startup-id redshift-gtk
+
 # firefox
 bindsym $mod+o exec firefox
 
@@ -278,10 +282,12 @@ bar {
         position top
         status_command ~/.local/bin/bumblebee-status \
         -m progress indicator datetime git cpu sensors memory \
-           disk battery nic pasink bluetooth brightness pasource dnf kernel \
+           disk battery nic pasink bluetooth pasource \
+           redshift \
         -p root.path=/ \
            time.format="%H:%M CW %V" \
            date.format="%a, %b %d %Y"  \
+           datetime.format="%H:%M | %a | %b %d %Y | CW %V |" \
            indicator.include='capslock' \
         -t gruvbox-powerline
         # pasink pasource -p time.format="%H:%M"
