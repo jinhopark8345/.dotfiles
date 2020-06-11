@@ -64,13 +64,13 @@ bindsym Mod4+Return exec i3-sensible-terminal
 bindsym Mod4+Shift+q kill
 bindsym Mod4+q kill
 
-# use rofi instead of dmenu
-set $bg-color&amp;amp;amp;nbsp;&amp;amp;amp;nbsp; #2f343f
-set $text-color #f3f4f5
-bindsym Mod4+d exec rofi -show run -lines 20 -eh 1.3 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$text-color" -hlfg "$bg-color" -font "System San Francisco Display 10"
-
+################## use rofi instead of dmenu ####################3
 # start dmenu (a program launcher)
 # bindsym Mod4+d exec dmenu_run
+set $bg-color&amp;amp;amp;nbsp;&amp;amp;amp;nbsp; #2f343f
+set $text-color #f3f4f5
+bindsym Mod4+space exec rofi -show run -lines 15 -eh 1.3 -opacity "90" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$text-color" -hlfg "$bg-color" -font "System San Francisco Display 10"
+################## use rofi instead of dmenu ####################3
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -121,7 +121,7 @@ bindsym Mod4+Shift+e layout toggle split
 bindsym Mod4+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym Mod4+space focus mode_toggle
+# bindsym Mod4+space focus mode_toggle
 
 # focus/unfocus
 bindsym Mod4+a focus parent
@@ -259,6 +259,21 @@ exec --no-startup-id redshift-gtk
 # firefox
 bindsym Mod4+o exec firefox
 
+# nautilus
+bindsym Mod4+n exec nautilus
+
+# Chrome
+bindsym Mod4+r exec google-chrome
+
+############### Screen Shots #####################
+# install scrot # $ sudo apt-get install scrot
+# https://erikdubois.be/two-different-ways-make-screenshot-i3/
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
+bindsym Control+Print exec gnome-screenshot -i
+############### Screen Shots #####################
+
+
+
 # i3-gap config
 smart_gaps on
 smart_gaps inverse_outer
@@ -319,7 +334,5 @@ bar {
            disk.format='{used}/{size}' \
            nic.format='{intf}/{state}' \
         -t gruvbox-powerline
-
-
 
 }
