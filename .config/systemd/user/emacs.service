@@ -5,7 +5,6 @@ Description=Emacs Daemon
 Type=forking
 ExecStart=/usr/local/bin/emacs --daemon
 ExecStop=/usr/local/bin/emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
-Restart=always
 
 [Install]
 WantedBy=default.target
