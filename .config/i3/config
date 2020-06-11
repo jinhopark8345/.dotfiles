@@ -263,7 +263,7 @@ bindsym Mod4+o exec firefox
 bindsym Mod4+n exec nautilus
 
 # Chrome
-bindsym Mod4+r exec google-chrome
+bindsym Mod4+g exec google-chrome
 
 ############### Screen Shots #####################
 # install scrot # $ sudo apt-get install scrot
@@ -275,11 +275,13 @@ bindsym Control+Print exec gnome-screenshot -i
 
 
 # i3-gap config
-smart_gaps on
-smart_gaps inverse_outer
+# when there is only one window, there will be no border
+# smart_gaps on
+# smart_gaps inverse_outer
+
 # smart_borders on
-gaps inner 15
-gaps outer 5
+gaps inner 10
+gaps outer 2
 
 
 # border / border pixel=0 : no title bar
@@ -312,9 +314,9 @@ for_window [class="^.*"] border pixel 3
 # pasource :
 # redshift
 bar {
-        font pango:DejaVu Sans Mono 8
-        font pango:FontAwesome 8
-        font pango:DejaVu Sans Mono for Powerline 8
+        font pango:DejaVu Sans Mono 9
+        font pango:FontAwesome 9
+        font pango:DejaVu Sans Mono for Powerline 9
 
         # get list of display from $ xrandr --query
         tray_output DVI-D-1
@@ -322,9 +324,14 @@ bar {
 
         position top
         status_command ~/.local/bin/bumblebee-status \
-        -m progress indicator weather datetime cpu sensors memory \
-           disk battery nic pasink pasource bluetooth \
+        -m datetime weather \
+           progress indicator \
+           cpu sensors memory \
+           disk \
+           nic \
+           pasink pasource \
            redshift \
+           battery bluetooth \
         -p root.path=/ \
            time.format="%H:%M CW %V" \
            date.format="%a, %b %d %Y"  \
