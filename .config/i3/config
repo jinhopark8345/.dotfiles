@@ -335,7 +335,6 @@ bar {
         position top
         status_command ~/.config/bumblebee-status/bumblebee-status \
         -m \
-           emacs \
            datetime weather \
            progress \
            cpu sensors memory \
@@ -344,7 +343,7 @@ bar {
            pasink pasource \
            redshift \
            battery bluetooth \
-           indicator \
+           emacs indicator \
         -p root.path=/ \
            time.format="%H:%M CW %V" \
            date.format="%a, %b %d %Y"  \

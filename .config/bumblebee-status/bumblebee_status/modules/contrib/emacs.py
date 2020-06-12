@@ -26,7 +26,6 @@ class Module(core.module.Module):
         super().__init__(config, theme, core.widget.Widget(self.is_running))
         self.__is_running = ""
         self.__app_name = "emacs"
-        self.__brightness = "n/a"
 
     def is_running(self, widget):
         return self.__is_running
