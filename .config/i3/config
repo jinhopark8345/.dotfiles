@@ -265,6 +265,16 @@ bindsym Mod4+n exec nautilus
 # Chrome
 bindsym Mod4+g exec google-chrome
 
+# gnome-system-monitor / win10 task-manager like
+# terminal version $ top or $ lsof
+# https://www.tecmint.com/command-line-tools-to-monitor-linux-performance/
+bindsym Mod4+s exec gnome-system-monitor
+
+
+
+
+
+
 ############### Screen Shots #####################
 # install scrot # $ sudo apt-get install scrot
 # https://erikdubois.be/two-different-ways-make-screenshot-i3/
@@ -304,7 +314,7 @@ for_window [class="^.*"] border pixel 3
 # weather : show weather, temperature
 # datetime : show date and time
 # cpu : show cpu usage in percentage
-# sensors : cpu temperature and frequency
+# sensors : cpu temperature and frequency, sensors2 and sensors need lm-sensors library
 # memory : memory usage
 # disk : disk usage
 # battery : show remain battery percentage or AC
@@ -323,23 +333,26 @@ bar {
         # tray_output HDMI-1
 
         position top
-        status_command ~/.local/bin/bumblebee-status \
-        -m datetime weather \
-           progress indicator \
+        status_command ~/.config/bumblebee-status/bumblebee-status \
+        -m \
+           datetime weather \
+           progress \
            cpu sensors memory \
            disk \
            nic \
            pasink pasource \
            redshift \
            battery bluetooth \
+           indicator \
         -p root.path=/ \
            time.format="%H:%M CW %V" \
            date.format="%a, %b %d %Y"  \
            datetime.format="%H:%M %a %b %d %Y CW:%V" \
            indicator.include='capslock' \
-           memory.format='{used}' \
+           memory.format='{used}/{total}' \
            disk.format='{used}/{size}' \
            nic.format='{intf}/{state}' \
-        -t gruvbox-powerline
+        -t iceberg-contrast
 
 }
+

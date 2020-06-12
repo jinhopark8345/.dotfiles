@@ -118,7 +118,9 @@ if ! shopt -oq posix; then
 fi
 
 export WORKON_HOME=$HOME/.virtualenvs
-source $HOME/.local/bin/virtualenvwrapper.sh
+VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
+source /usr/local/bin/virtualenvwrapper.sh
+# source $HOME/.local/bin/virtualenvwrapper.sh
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
