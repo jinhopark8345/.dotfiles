@@ -335,6 +335,7 @@ bar {
         position top
         status_command ~/.config/bumblebee-status/bumblebee-status \
         -m \
+           emacs \
            datetime weather \
            progress \
            cpu sensors memory \
@@ -352,6 +353,7 @@ bar {
            memory.format='{used}/{total}' \
            disk.format='{used}/{size}' \
            nic.format='{intf}/{state}' \
+           emacs.interval=5 \
         -t iceberg-contrast
 
 }
