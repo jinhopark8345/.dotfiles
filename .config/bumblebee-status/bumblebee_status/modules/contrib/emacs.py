@@ -32,8 +32,8 @@ class Module(core.module.Module):
 
     def update(self):
         if is_process_running(self.__app_name):
-            self.__is_running = self.__app_name + ":on"
+            self.__is_running = self.__app_name + "/up"
         else:
-            self.__is_running = self.__app_name + ":off"
+            self.__is_running = self.__app_name + "/down"
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

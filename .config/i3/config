@@ -254,7 +254,7 @@ bindsym Mod4+semicolon exec emacsclient --create-frame
 bindsym Mod4+Shift+semicolon exec systemctl --user restart emacs.service
 
 exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
-exec --no-startup-id redshift-gtk
+# exec --no-startup-id redshift-gtk
 
 # firefox
 bindsym Mod4+o exec firefox
@@ -341,7 +341,6 @@ bar {
            disk \
            nic \
            pasink pasource \
-           redshift \
            battery bluetooth \
            emacs indicator \
         -p root.path=/ \
