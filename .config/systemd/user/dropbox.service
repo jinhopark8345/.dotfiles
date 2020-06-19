@@ -3,12 +3,13 @@ Description=Dropbox Service
 After=network.target
 
 [Service]
-ExecStart="/usr/local/bin/dropbox start"
-ExecStop="/usr/local/bin/dropbox stop"
+ExecStart=/usr/local/bin/dropbox start
+ExecStop=/usr/local/bin/dropbox stop
 Restart=on-failure
 RestartSec=5
-User=jinho
+# User=%U
+# Group=%U
 
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
