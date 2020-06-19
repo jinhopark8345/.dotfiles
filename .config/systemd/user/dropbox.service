@@ -1,0 +1,14 @@
+[Unit]
+Description=Dropbox Service
+After=network.target
+
+[Service]
+ExecStart="/usr/local/bin/dropbox start"
+ExecStop="/usr/local/bin/dropbox stop"
+Restart=on-failure
+RestartSec=5
+User=jinho
+
+
+[Install]
+WantedBy=multi-user.target
