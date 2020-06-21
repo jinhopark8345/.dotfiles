@@ -1,11 +1,3 @@
-
-# pylint: disable=C0111,R0903
-
-"""Shows Linux kernel version information
-
-contributed by `pierre87 <https://github.com/pierre87>`_ - many thanks!
-"""
-
 import psutil
 import core.module
 import core.widget
@@ -25,8 +17,8 @@ class Module(core.module.Module):
     def __init__(self, config, theme):
         super().__init__(config, theme, core.widget.Widget(self.is_running))
         self.__is_running = ""
-        self.__app_name = "emacs"
-        self.display_app_name = "em"
+        self.__app_name = "dropbox"
+        self.display_app_name = "dbox"
 
     def is_running(self, widget):
         return self.__is_running

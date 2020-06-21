@@ -24,7 +24,7 @@ font pango:monospace 8
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# dropbox daemon
+# dropbox daemon / maybe it's redundant because I have systemctl unit for dropbox daemon but I still can't see dropbox icon on system-tray
 exec --no-startup-id dropbox start
 
 # set wallpaper / using feh
@@ -349,7 +349,7 @@ bar {
            pasink pasource \
            battery bluetooth \
            redshift \
-           emacs indicator \
+           emacs dropbox indicator \
         -p root.path=/ \
            time.format="%H:%M CW %V" \
            date.format="%a, %b %d %Y"  \
