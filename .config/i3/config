@@ -24,12 +24,16 @@ font pango:monospace 8
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
+# dropbox daemon
+exec --no-startup-id dropbox start
+
 # set wallpaper / using feh
 exec_always feh --bg-scale ~/Dropbox/Images/wallpapers/wallpaper5-3840x2160.jpg
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
 
 # compton is for fading / dim / transparent effect
 # but I don't use compton anymore because i3-gap and border is enough to locate my focused window
@@ -354,7 +358,8 @@ bar {
            memory.format='{used}/{total}' \
            disk.format='{used}/{size}' \
            nic.format='{intf}/{state}' \
-           emacs.interval=5 \
+           emacs.interval=3 \
+           dropbox.interval=3 \
         -t iceberg-contrast
 
 }
