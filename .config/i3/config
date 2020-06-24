@@ -320,6 +320,7 @@ for_window [class="^.*"] border pixel 3
 # need to install certain python packages to use bumblebee-status, instead of "git clone"
         # -m time date nic disk:root cpu memory battery pasink bluetooth brightness pasource dnf \
 
+
 # indicator : show capslock or numslock
 # weather : show weather, temperature
 # datetime : show date and time
