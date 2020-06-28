@@ -260,7 +260,8 @@ bindsym Mod4+Shift+Control+n exec i3lock -i ~/Dropbox/Images/wallpapers/wallpape
 bindsym Mod4+semicolon exec emacsclient --create-frame
 
 # emacs daemon restart
-bindsym Mod4+Shift+semicolon exec systemctl --user stop emacs.service
+# bindsym Mod4+Shift+semicolon exec systemctl --user stop emacs.service
+bindsym Mod4+Shift+semicolon exec emacsclient -e '(jp/server-shutdown)'
 bindsym Mod4+Shift+Control+semicolon exec systemctl --user restart emacs.service
 bindsym Mod4+Shift+Control+F11 exec zenity --question --text="Do you want to power off the computer?" && shutdown now
 bindsym Mod4+Shift+Control+F12 exec zenity --question --text="Do you want to restart the computer?" && shutdown -r now
