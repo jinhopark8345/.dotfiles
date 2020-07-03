@@ -124,3 +124,9 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+/bin/bash /home/jinho/Dropbox/xset-config/xset.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/jinho/.sdkman"
+[[ -s "/home/jinho/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jinho/.sdkman/bin/sdkman-init.sh"
