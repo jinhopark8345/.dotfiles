@@ -126,6 +126,8 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 /bin/bash /home/jinho/Dropbox/xset-config/xset.sh
+alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jinho/.sdkman"
