@@ -125,9 +125,19 @@ source /usr/local/bin/virtualenvwrapper.sh
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-/bin/bash /home/jinho/Dropbox/xset-config/xset.sh
-alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias
+alias ledger='ledger --strict --explicit'
 
+alias bal='ledger bal -R'
+alias balcash='ledger -R -X KRW --current --flat bal assets:citibank liabilities:credit'
+alias balnet='ledger -R -X KRW --current --depth 2 bal assets liabilities'
+alias bud='ledger --flat --current bal Budget'
+# alias budr='ledger -d "d>=[this month]" -S "date" reg Budget and'
+alias reg='ledger reg -R --tail 5'
+
+/bin/bash /home/jinho/Dropbox/xset-config/xset.sh
+
+# This Must Be At The End Of The Alias
+alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jinho/.sdkman"
