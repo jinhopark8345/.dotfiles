@@ -134,8 +134,6 @@ alias bud='ledger --flat --current bal Budget'
 # alias budr='ledger -d "d>=[this month]" -S "date" reg Budget and'
 alias reg='ledger reg -R --tail 5'
 
-/bin/bash /home/jinho/Dropbox/xset-config/xset.sh
-
 # This Must Be At The End Of The Alias
 alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias
 

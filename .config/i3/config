@@ -26,6 +26,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # dropbox daemon / maybe it's redundant because I have systemctl unit for dropbox daemon but I still can't see dropbox icon on system-tray
 exec --no-startup-id dropbox start
+# remap keys
+exec --no-startup-id /bin/bash ~/Dropbox/Startup/xmodmap-config/xmodstartup.sh
+# screen saver stuff
+exec --no-startup-id /bin/bash ~/Dropbox/Startup/xset-config/xset.sh
+
+
 
 # set wallpaper / using feh
 exec_always feh --bg-scale ~/Dropbox/Images/wallpapers/wallpaper5-3840x2160.jpg
