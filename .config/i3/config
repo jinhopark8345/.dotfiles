@@ -33,8 +33,6 @@ exec --no-startup-id dropbox start
 bindsym $mod+Shift+e exec ~/Dropbox/Startup/xmodmap-config/xmodmapstartup-desktop.sh
 # exec ~/Dropbox/Startup/xmodmap-config/xmodmapstartup-desktop.sh
 # bindsym $mod+] exec ~/Dropbox/Startup/xmodmap-config/xmodmapstartup-desktop.sh
-# bindsym $mod+Shift+e exec xmodmap -verbose /home/jinho/Dropbox/Startup/xmodmap-config/xmodmap_desktop_hhkb_working >> ~/Dropbox/temp-trash-or-whatever/log.txt
-# exec xmodmap -verbose /home/jinho/Dropbox/Startup/xmodmap-config/xmodmap_desktop_hhkb_working >> ~/Dropbox/temp-trash-or-whatever/log2.txt
 
 # screen saver stuff
 exec --no-startup-id ~/Dropbox/Startup/xset-config/xset.sh
@@ -351,27 +349,27 @@ for_window [title="foo"]                                floating enable
 
 ################################################################################
 # hibernate doesn't work
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate/not-working, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id ~/.config/i3/i3exit.sh lock, mode "default"
-    bindsym e exec --no-startup-id ~/.config/i3/i3exit.sh logout, mode "default"
-    bindsym s exec --no-startup-id ~/.config/i3/i3exit.sh suspend, mode "default"
-    bindsym h exec --no-startup-id ~/.config/i3/i3exit.sh hibernate, mode "default"
-    bindsym r exec --no-startup-id ~/.config/i3/i3exit.sh reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id ~/.config/i3/i3exit.sh shutdown, mode "default"
+    bindsym l exec --no-startup-id ~/Dropbox/i3settings/i3exit.sh lock, mode "default"
+    bindsym e exec --no-startup-id ~/Dropbox/i3settings/i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id ~/Dropbox/i3settings/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id ~/Dropbox/i3settings/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id ~/Dropbox/i3settings/i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id ~/Dropbox/i3settings/i3exit.sh shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+F12 mode "$mode_system"
 ################################################################################
 
 ################################################################################
 set $keyboard System (h) HHKB, (n) normal
 mode "$keyboard" {
-     bindsym h exec --no-startup-id ~/.config/i3/keyboard-select.sh HHKB, mode "default"
-     bindsym n exec --no-startup-id ~/.config/i3/keyboard-select.sh normal, mode "default"
+     bindsym h exec --no-startup-id ~/Dropbox/Startup/xmodmap-config/stable/keyboard-select.sh HHKB, mode "default"
+     bindsym n exec --no-startup-id ~/Dropbox/Startup/xmodmap-config/stable/keyboard-select.sh normal, mode "default"
 
      # back to normal: Enter or Escape
      bindsym Return mode "default"
