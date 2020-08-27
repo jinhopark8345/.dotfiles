@@ -175,25 +175,25 @@ workspace 4 output DVI-D-1
 workspace 5 output DVI-D-1
 workspace 6 output DVI-D-1
 workspace 7 output DVI-D-1
-workspace 8 output DVI-D-1
-workspace 9 output DVI-D-1
-workspace 10 output DVI-D-1
+# workspace 8 output DVI-D-1
+# workspace 9 output DVI-D-1
+# workspace 10 output DVI-D-1
 
 # workspace 6 output  HDMI-1
 # workspace 7 output  HDMI-1
-# workspace 8 output  HDMI-1
-# workspace 9 output  HDMI-1
-# workspace 10 output HDMI-1
-workspace 11 output HDMI-1
-workspace 12 output HDMI-1
-workspace 13 output HDMI-1
-workspace 14 output HDMI-1
-workspace 15 output HDMI-1
-workspace 16 output HDMI-1
-workspace 17 output HDMI-1
-workspace 18 output HDMI-1
-workspace 19 output HDMI-1
-workspace 20 output HDMI-1
+workspace 8 output  HDMI-1
+workspace 9 output  HDMI-1
+workspace 10 output HDMI-1
+# workspace 11 output HDMI-1
+# workspace 12 output HDMI-1
+# workspace 13 output HDMI-1
+# workspace 14 output HDMI-1
+# workspace 15 output HDMI-1
+# workspace 16 output HDMI-1
+# workspace 17 output HDMI-1
+# workspace 18 output HDMI-1
+# workspace 19 output HDMI-1
+# workspace 20 output HDMI-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -207,16 +207,16 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-bindsym $mod+Control+1 workspace number $ws11
-bindsym $mod+Control+2 workspace number $ws12
-bindsym $mod+Control+3 workspace number $ws13
-bindsym $mod+Control+4 workspace number $ws14
-bindsym $mod+Control+5 workspace number $ws15
-bindsym $mod+Control+6 workspace number $ws16
-bindsym $mod+Control+7 workspace number $ws17
-bindsym $mod+Control+8 workspace number $ws18
-bindsym $mod+Control+9 workspace number $ws19
-bindsym $mod+Control+0 workspace number $ws20
+# bindsym $mod+Control+1 workspace number $ws11
+# bindsym $mod+Control+2 workspace number $ws12
+# bindsym $mod+Control+3 workspace number $ws13
+# bindsym $mod+Control+4 workspace number $ws14
+# bindsym $mod+Control+5 workspace number $ws15
+# bindsym $mod+Control+6 workspace number $ws16
+# bindsym $mod+Control+7 workspace number $ws17
+# bindsym $mod+Control+8 workspace number $ws18
+# bindsym $mod+Control+9 workspace number $ws19
+# bindsym $mod+Control+0 workspace number $ws20
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -230,16 +230,16 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym $mod+Control+Shift+1 move container to workspace number $ws11
-bindsym $mod+Control+Shift+2 move container to workspace number $ws12
-bindsym $mod+Control+Shift+3 move container to workspace number $ws13
-bindsym $mod+Control+Shift+4 move container to workspace number $ws14
-bindsym $mod+Control+Shift+5 move container to workspace number $ws15
-bindsym $mod+Control+Shift+6 move container to workspace number $ws16
-bindsym $mod+Control+Shift+7 move container to workspace number $ws17
-bindsym $mod+Control+Shift+8 move container to workspace number $ws18
-bindsym $mod+Control+Shift+9 move container to workspace number $ws19
-bindsym $mod+Control+Shift+0 move container to workspace number $ws20
+# bindsym $mod+Control+Shift+1 move container to workspace number $ws11
+# bindsym $mod+Control+Shift+2 move container to workspace number $ws12
+# bindsym $mod+Control+Shift+3 move container to workspace number $ws13
+# bindsym $mod+Control+Shift+4 move container to workspace number $ws14
+# bindsym $mod+Control+Shift+5 move container to workspace number $ws15
+# bindsym $mod+Control+Shift+6 move container to workspace number $ws16
+# bindsym $mod+Control+Shift+7 move container to workspace number $ws17
+# bindsym $mod+Control+Shift+8 move container to workspace number $ws18
+# bindsym $mod+Control+Shift+9 move container to workspace number $ws19
+# bindsym $mod+Control+Shift+0 move container to workspace number $ws20
 
 
 # move focused container
@@ -254,6 +254,7 @@ bindsym $mod+Shift+Control+r restart
 bindsym $mod+Shift+Control+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
+
 bindsym $mod+Control+h resize shrink width 10px or 10ppt
 bindsym $mod+Control+j resize grow height 10px or 10ppt
 bindsym $mod+Control+k resize shrink height 10px or 10ppt
@@ -301,8 +302,8 @@ bindsym $mod+semicolon exec emacsclient --create-frame
 # bindsym $mod+Shift+semicolon exec systemctl --user stop emacs.service
 bindsym $mod+Shift+semicolon exec emacsclient -e '(jp/server-shutdown)'
 bindsym $mod+Shift+Control+semicolon exec systemctl --user restart emacs.service
-bindsym $mod+Shift+Control+F11 exec zenity --question --text="Do you want to power off the computer?" && shutdown now
-bindsym $mod+Shift+Control+F12 exec zenity --question --text="Do you want to restart the computer?" && shutdown -r now
+# bindsym $mod+Shift+Control+F11 exec zenity --question --text="Do you want to power off the computer?" && shutdown now
+# bindsym $mod+Shift+Control+F12 exec zenity --question --text="Do you want to restart the computer?" && shutdown -r now
 
 exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
