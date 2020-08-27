@@ -143,6 +143,9 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 # sync bashrc alias and eshell alias
 alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias
 
+# display setup
+# xrandr --output DVI-D-1 --right-of HDMI-1
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jinho/.sdkman"
 [[ -s "/home/jinho/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jinho/.sdkman/bin/sdkman-init.sh"
