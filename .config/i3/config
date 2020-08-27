@@ -356,6 +356,8 @@ mode "$keyboard" {
 }
 
 bindsym $mod+F11 mode "$keyboard"
+bindsym $mod+d exec --no-startup-id ~/Dropbox/Startup/xmodmap-config/stable/keyboard-select.sh HHKB
+
 ################################################################################
 
 # i3-gap config
