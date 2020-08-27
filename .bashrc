@@ -2,7 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -119,8 +118,8 @@ fi
 
 export WORKON_HOME=$HOME/.virtualenvs
 VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
-source /usr/local/bin/virtualenvwrapper.sh
-# source $HOME/.local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias dotf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -134,9 +133,14 @@ alias bud='ledger --flat --current bal Budget'
 # alias budr='ledger -d "d>=[this month]" -S "date" reg Budget and'
 alias reg='ledger reg -R --tail 5'
 
-/bin/bash /home/jinho/Dropbox/xset-config/xset.sh
+export DENO_INSTALL="/home/$USER/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+
+# /bin/bash /home/jinho/Dropbox/xset-config/xset.sh
 
 # This Must Be At The End Of The Alias
+# sync bashrc alias and eshell alias
 alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.emacs.d/eshell/alias
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
