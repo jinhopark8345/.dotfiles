@@ -128,10 +128,11 @@ class Module(core.module.Module):
         if not mhz:
             return "n/a"
 
-        if mhz < 1000:
-            return "{} MHz".format(mhz)
-        else:
-            return "{:0.01f} GHz".format(float(mhz) / 1000.0)
+        # remove MHz unit because line lenth kept chanching
+        # if mhz < 1000:
+        #     return "{} MHz".format(mhz)
+        # else:
+        return "{:0.01f} GHz".format(float(mhz) / 1000.0)
 
     def temperature(self, _):
         if self._freq:
