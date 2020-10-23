@@ -137,6 +137,35 @@ export DENO_INSTALL="/home/$USER/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 
+
+############## Cppsim Configuration (General) START ##############
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+# User specific aliases and functions
+
+### Setting MATLAB_SHELL as below fixes some issues when running
+### Cppsim within Matlab
+export MATLAB_SHELL=/bin/sh
+
+### Used by Cppsim and CppsimView binaries and Cppsim Cadence GUI
+export CPPSIMHOME=$HOME/CppSim
+
+### Used within included $CPPSIM/cds/cds.lib and $CPPSIM/cds/.cdsinit files
+### Also used by PLL Design Assistant
+export CPPSIMSHAREDHOME=$HOME/CppSim/CppSimShared
+
+### EDITOR is required to create or modify files from Sue2
+export EDITOR=/usr/local/bin/emacs
+############## Cppsim Configuration (General) END ##############
+
+export PATH=$PATH:$CPPSIMSHAREDHOME/bin
+
+
+# texlab
+export PATH=$PATH:$HOME/.cargo/bin
+
 # /bin/bash /home/jinho/Dropbox/xset-config/xset.sh
 
 # This Must Be At The End Of The Alias
