@@ -413,19 +413,20 @@ for_window [class="^.*"] border pixel 6
 # redshift
 
 bar {
-        font pango:DejaVu Sans Mono 10.5
-        font pango:FontAwesome 10.5
-        # font pango:DejaVu Sans Mono for Powerline 11 # using default currently
+        font pango:DejaVu Sans Mono 9
+        font pango:FontAwesome 9
+        font pango:DejaVu Sans Mono for Powerline 9
 
         # get list of display from $ xrandr --query
 
         # for desktop-ubuntu
-        tray_output DVI-D-0
+        # tray_output DVI-D-0
         # tray_output HDMI-0
 
         # for XPS15
+        # tray_output eDP-1-1 # xps15
+        tray_output DP-1-3 # parents' place - Yangpyeong
         # tray_output eDP-1-1
-        # status_command ~/.config/bumblebee-status/bumblebee-status \
 
         position top
         status_command ~/.config/bumblebee-status/bumblebee-status \
