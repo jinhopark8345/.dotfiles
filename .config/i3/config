@@ -18,7 +18,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # dropbox daemon / maybe it's redundant because I have systemctl unit for dropbox daemon but I still can't see dropbox icon on system-tray
 exec --no-startup-id dropbox start
 
-
 exec --no-startup-id exec ~/Dropbox/i3settings/i3config.sh
 
 # set wallpaper / using feh
@@ -169,6 +168,11 @@ workspace 7 output DVI-D-0
 # workspace 9 output DVI-D-0
 # workspace 10 output DVI-D-0
 
+# workspace 1 output HDMI-0
+# workspace 2 output HDMI-0
+# workspace 3 output HDMI-0
+# workspace 4 output HDMI-0
+# workspace 5 output HDMI-0
 # workspace 6 output  HDMI-0
 # workspace 7 output  HDMI-0
 workspace 8 output  HDMI-0
@@ -359,7 +363,9 @@ mode "$keyboard" {
      bindsym Escape mode "default"
 }
 
-bindsym $mod+F11 mode "$keyboard"
+bindsym $mod+F10 mode "$keyboard"
+# binsym $mod+y exec --no-startup-id ~/Dropbox/Startup/xmodmap-config/stable/keyboard-select.sh HHKB, mode "default"
+
 # bindsym $mod+d exec --no-startup-id ~/Dropbox/Startup/xmodmap-config/stable/keyboard-select.sh HHKB
 
 ################################################################################
@@ -370,11 +376,11 @@ bindsym $mod+F11 mode "$keyboard"
 # smart_gaps inverse_outer
 
 # smart_borders on
-gaps inner 13
+gaps inner 10
 gaps outer 2
 
 # border / border pixel=0 : no title bar
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 6
 # new_window 1pixel
 
 ############# original i3bar config <START> ########################
@@ -445,6 +451,8 @@ bar {
            nvidiagpu.format='{temp}°C {mem_used}/{mem_total} MiB' \
            weather.location='Seoul' \
            emacs.interval=5 \
+           cpu.interval=5 \
+           sensors.interval=5 \
            dropbox.interval=7 \
            brightness.interval=7 \
            weather.interval=120 \
