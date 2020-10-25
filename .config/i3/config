@@ -407,9 +407,9 @@ for_window [class="^.*"] border pixel 4
 # redshift
 
 bar {
-        font pango:DejaVu Sans Mono 9
-        font pango:FontAwesome 9
-        font pango:DejaVu Sans Mono for Powerline 9
+        font pango:DejaVu Sans Mono 10.5
+        font pango:FontAwesome 10.5
+        font pango:DejaVu Sans Mono for Powerline 10.5
 
         # get list of display from $ xrandr --query
 
