@@ -418,8 +418,15 @@ new_window 1pixel
 # redshift
 
 bar {
+
+        # DESKTOP
         font pango:DejaVu Sans Mono 10.5
         font pango:FontAwesome 10.5
+
+        # XPS15
+        # font pango:DejaVu Sans Mono 9
+        # font pango:FontAwesome 9
+        # font pango:DejaVu Sans Mono Powerline 9
 
         # get list of display from $ xrandr --query
 
