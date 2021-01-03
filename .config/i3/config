@@ -95,16 +95,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left 150px
+bindsym $mod+Shift+j move down 150px
+bindsym $mod+Shift+k move up 150px
+bindsym $mod+Shift+l move right 150px
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left 150px
+bindsym $mod+Shift+Down move down 150px
+bindsym $mod+Shift+Up move up 150px
+bindsym $mod+Shift+Right move right 150px
 
 # split in horizontal orientation
 bindsym $mod+slash split h
@@ -442,7 +442,7 @@ bar {
 
         position top
         status_command ~/.config/bumblebee-status/bumblebee-status \
-        -m datetime weather \
+        -m datetime weather temptime \
            cpu sensors memory \
            nvidiagpu \
            disk \
@@ -453,6 +453,7 @@ bar {
            brightness \
            emacs dropbox indicator \
         -p root.path=/ \
+           temptime.format="%H:%M" \
            time.format="%H:%M CW %V" \
            date.format="%a, %b %d %Y"  \
            datetime.format="%H:%M %a %b %d %Y CW:%V" \
