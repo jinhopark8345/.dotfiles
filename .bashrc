@@ -162,6 +162,8 @@ export EDITOR=/usr/local/bin/emacs
 
 export PATH=$PATH:$CPPSIMSHAREDHOME/bin
 
+export PATH="$PATH:$HOME/.npm/bin"
+
 
 # texlab
 export PATH=$PATH:$HOME/.cargo/bin
@@ -174,6 +176,7 @@ alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.e
 
 # display setup
 # xrandr --output DVI-D-1 --right-of HDMI-1
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jinho/.sdkman"
