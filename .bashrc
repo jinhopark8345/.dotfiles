@@ -157,7 +157,7 @@ export CPPSIMHOME=$HOME/CppSim
 export CPPSIMSHAREDHOME=$HOME/CppSim/CppSimShared
 
 ### EDITOR is required to create or modify files from Sue2
-export EDITOR=/usr/local/bin/emacs
+export EDITOR=/usr/bin/emacsclient
 ############## Cppsim Configuration (General) END ##############
 
 export PATH=$PATH:$CPPSIMSHAREDHOME/bin
@@ -181,3 +181,6 @@ alias | sed -E "s/^alias ([^=]+)='(.*)'$/alias \1 \2 \$*/g; s/'\\\''/'/g;" >~/.e
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/jinho/.sdkman"
 [[ -s "/home/jinho/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jinho/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="/home/jinho/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

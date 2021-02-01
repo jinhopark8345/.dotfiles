@@ -20,8 +20,14 @@ exec --no-startup-id dropbox start
 exec --no-startup-id exec ~/Dropbox/settings/i3settings/i3config.sh
 
 # set wallpaper / using feh
-exec_always feh --bg-scale ~/Dropbox/settings/wallpapers/wallpaper5-3840x2160.png
-# exec_always feh --bg-scale ~/Dropbox/Images/withElla/20200806_213506.png
+# exec_always feh --bg-scale ~/Dropbox/settings/wallpapers/wallpaper5-3840x2160.png
+# set $FILENAME "$(find /home/jinho/Dropbox/settings/wallpapers -type f |shuf -n1)"
+# exec_always feh --bg-scale $FILENAME
+# exec_always feh --bg-scale /home/jinho/Dropbox/settings/wallpapers/pexels-eberhard-grossgasteiger-443446.jpg
+# exec_always --no-startup-id ~/Dropbox/settings/i3settings/wallpaper.sh
+
+# exec --no-startup-id feh --randomize --bg-scale ~/Dropbox/settings/wallpapers/*
+# find dirname -type f | shuf -n 5
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -30,8 +36,8 @@ exec --no-startup-id nm-applet
 
 # compton is for fading / dim / transparent effect
 # but I don't use compton anymore because i3-gap and border is enough to locate my focused window
-# exec --no-startup-id "compton -b"
-# exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
+exec --no-startup-id "compton -b"
+exec --no-startup-id /usr/bin/compton --config ~/.config/compton.conf
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -369,6 +375,8 @@ mode "$keyboard" {
 }
 
 bindsym $mod+F10 mode "$keyboard"
+bindsym $mod+F9 exec --no-startup-id ~/Dropbox/settings/i3settings/wallpaper.sh # wallpaper change key binding
+
 # binsym $mod+y exec --no-startup-id ~/Dropbox/Startup/xmodmap-config/stable/keyboard-select.sh HHKB, mode "default"
 
 # bindsym $mod+d exec --no-startup-id ~/Dropbox/Startup/xmodmap-config/stable/keyboard-select.sh HHKB
