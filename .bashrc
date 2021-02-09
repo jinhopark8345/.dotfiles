@@ -168,7 +168,6 @@ export PATH="$PATH:$HOME/.npm/bin"
 # texlab
 export PATH=$PATH:$HOME/.cargo/bin
 
-# /bin/bash /home/jinho/Dropbox/xset-config/xset.sh
 
 # This Must Be At The End Of The Alias
 # sync bashrc alias and eshell alias
