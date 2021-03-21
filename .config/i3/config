@@ -176,6 +176,17 @@ set $ws20 "20"
 # workspace 9 output DVI-D-0
 # workspace 10 output DVI-D-0
 
+workspace 1 output DP-1-1
+workspace 2 output DP-1-1
+workspace 3 output DP-1-1
+workspace 4 output DP-1-1
+workspace 5 output DP-1-1
+workspace 6 output DP-1-1
+workspace 7 output DP-1-1
+# workspace 8 output DP-1-1
+# workspace 9 output DP-1-1
+# workspace 10 output DP-1-1
+
 # workspace 1 output DP-1-3
 # workspace 2 output DP-1-3
 # workspace 3 output DP-1-3
@@ -183,21 +194,22 @@ set $ws20 "20"
 # workspace 5 output DP-1-3
 # workspace 6 output DP-1-3
 # workspace 7 output DP-1-3
+# workspace 8 output DP-1-3
+# workspace 9 output DP-1-3
+# workspace 10 output DP-1-3
 
-workspace 1 output eDP-1-1
-workspace 2 output eDP-1-1
-workspace 3 output eDP-1-1
-workspace 4 output eDP-1-1
-workspace 5 output eDP-1-1
-workspace 6 output eDP-1-1
-workspace 7 output eDP-1-1
+
+# workspace 1 output eDP-1-1
+# workspace 2 output eDP-1-1
+# workspace 3 output eDP-1-1
+# workspace 4 output eDP-1-1
+# workspace 5 output eDP-1-1
+# workspace 6 output eDP-1-1
+# workspace 7 output eDP-1-1
 workspace 8 output eDP-1-1
 workspace 9 output eDP-1-1
 workspace 10 output eDP-1-1
 
-# workspace 8 output DVI-D-0
-# workspace 9 output DVI-D-0
-# workspace 10 output DVI-D-0
 
 # workspace 1 output HDMI-0
 # workspace 2 output HDMI-0
@@ -372,6 +384,9 @@ for_window [class="foo"]                                floating enable
 for_window [title="foo"]                                floating enable
 for_window [title="Android Emulator - Pixel_3_XL_API_30:5554"]   floating enable
 
+# https://github.com/rjekker/i3-battery-popup
+for_window [title="Battery Warning"] sticky enable
+exec --no-startup-id i3-battery-popup -n -D -L 20 -l 10
 ########### when I want to use apps in floating mode ########################
 
 ################################################################################
@@ -461,9 +476,10 @@ bar {
         # font pango:FontAwesome 10.5
 
         # XPS15
-        font pango:DejaVu Sans Mono 9
-        font pango:FontAwesome 9
-        # font pango:DejaVu Sans Mono Powerline 9
+        # font pango:DejaVu Sans Mono 9
+        # font pango:FontAwesome 9
+        font pango:DejaVu Sans Mono 10.5
+        font pango:FontAwesome 10.5
 
         # get list of display from $ xrandr --query
 
@@ -472,7 +488,8 @@ bar {
         # tray_output HDMI-0
 
         # for XPS15
-        tray_output eDP-1-1 # xps15
+        # tray_output eDP-1-1 # xps15
+        tray_output DP-1-1
         # tray_output DP-1-3
         # parents' place - Yangpyeong
         # tray_output eDP-1-1
