@@ -307,14 +307,14 @@ bindsym $mod+Shift+Control+semicolon exec systemctl --user restart emacs.service
 exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 
-# firefox
+# chrome
 bindsym $mod+o exec google-chrome
 
 # nautilus
 bindsym $mod+n exec nautilus
 
-# Chrome
-bindsym $mod+g exec firefox
+# firefox
+# bindsym $mod+g exec firefox
 
 # gnome-system-monitor / win10 task-manager like
 # terminal version $ top or $ lsof
@@ -394,11 +394,11 @@ bindsym $mod+F9 exec --no-startup-id ~/Dropbox/settings/i3settings/wallpaper.sh 
 # smart_gaps inverse_outer
 
 # smart_borders on
-gaps inner 10
+gaps inner 8
 gaps outer 2
 
 # border / border pixel=0 : no title bar
-for_window [class="^.*"] border pixel 6
+for_window [class="^.*"] border pixel 4
 new_window 1pixel
 
 ############# original i3bar config <START> ########################
@@ -433,8 +433,8 @@ new_window 1pixel
 bar {
 
         # DESKTOP
-        font pango:DejaVu Sans Mono 10.5
-        font pango:FontAwesome 10.5
+        font pango:DejaVu Sans Mono 9
+        font pango:FontAwesome 9
 
         # XPS15
         # font pango:DejaVu Sans Mono 9
